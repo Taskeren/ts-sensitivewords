@@ -19,7 +19,8 @@ jobs:
         with:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm test
-      - run: npm publish
+      - uses: oven-sh/setup-bun@v2
+      - run: bun ci
+      - run: bun run build --if-present
+      - run: bun test
+      - run: bun publish
