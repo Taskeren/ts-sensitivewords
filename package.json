@@ -1,0 +1,40 @@
+{
+  "name": "ts-sensitivewords",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A DFA map implementation for sensitive words matching and blocking.",
+  "author": "Taskeren",
+  "license": "MIT",
+  "homepage": "https://github.com/Taskeren/ts-sensitivewords",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taskeren/ts-sensitivewords.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Taskeren/ts-sensitivewords/issues"
+  },
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "bumpp": "^10.3.2",
+    "tsdown": "^0.18.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
+  }
+}
